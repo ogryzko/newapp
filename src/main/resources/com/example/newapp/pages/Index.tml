@@ -1,0 +1,69 @@
+<html t:type="layout" title="BMI Calculator"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <t:form class="form-horizontal">
+                <div class="form-group">
+                    <t:label for="age" class="col-sm-3"/>
+                    <div class="col-sm-3">
+                        <t:textfield t:id="age" validate="max=120,min=0"/>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="form-control-static">
+                            <span class="text-muted">
+                            от 0 до 120 лет
+                        </span>
+                        </p>
+                    </div>
+                </div>
+            </t:form>
+            <t:form class="form-horizontal">
+                <div class="form-group" >
+                    <t:label for="gender" class="col-sm-3"/>
+                    <div class="col-sm-3">
+                        <t:select t:id="gender" model="literal:Мужской,Женский"/>
+                    </div>
+                </div>
+            </t:form>
+            <t:form class="form-horizontal">
+                <div class="form-group">
+                    <t:label for="height" class="col-sm-3"/>
+                    <div class="col-sm-3">
+                        <t:textfield t:id="height" validate="max=300,min=0"/>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="form-control-static">
+                            <span class="text-muted">
+                            см от 0 до 300
+                        </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <t:label for="weight" class="col-sm-3"/>
+                    <div class="col-sm-3">
+                        <t:textfield t:id="weight" validate="max=570,min=0"/>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="form-control-static">
+                            <span class="text-muted">
+                            кг от 0 до 570
+                        </span>
+                        </p>
+                    </div>
+                </div>
+                <t:submit/>
+            </t:form>
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+    <div class="row">
+
+    </div>
+</div>
+
+</html>
