@@ -1,8 +1,8 @@
  ----
- Module com.example:newapp
+ Module com.example:BMICalculatorTapestry
  ----
 
-com.example:newapp Documentation
+com.example:BMICalculatorTapestry Documentation
 
   This is where you can start to document your module.
 

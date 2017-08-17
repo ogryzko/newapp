@@ -1,6 +1,6 @@
-package com.example.newapp.services;
+package com.example.bmicalculatortapestry.services;
 
-import com.example.newapp.enteties.HistoryItem;
+import com.example.bmicalculatortapestry.enteties.HistoryItem;
 
 /**
  * Created by eglushchenko on 17.08.2017.

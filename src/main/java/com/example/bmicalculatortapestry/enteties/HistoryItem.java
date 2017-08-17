@@ -1,4 +1,4 @@
-package com.example.newapp.enteties;
+package com.example.bmicalculatortapestry.enteties;
 
 import org.apache.tapestry5.beaneditor.Validate;
 

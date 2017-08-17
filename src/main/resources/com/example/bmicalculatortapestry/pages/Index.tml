@@ -1,7 +1,20 @@
-<html t:type="layout" title="BMI Calculator"
-      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
       xmlns:p="tapestry:parameter">
 
+<head>
+    <meta charset="utf-8"/>
+    <title>Калькулятор ИКТ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+<nav class="navbar navbar-dark bg-primary navbar-fixed-top">
+    <span class="navbar-text">
+      Калькулатор индекса массы тела
+    </span>
+</nav>
 <div class="container">
     <div class="row">
         <div class="col">
@@ -56,9 +69,9 @@
         </div>
         <div class="col">
             <t:zone t:id="result" id="result">
-                <h1>Результат</h1>
                 <t:if test="historyItem">
-                    <h2>ИКТ = ${historyItem.bmi} кг/м <sup>2</sup></h2>
+                    <h1>Результат</h1>
+                    <h2>ИМТ = ${historyItem.bmi} кг/м <sup>2</sup> (${historyItem.kind})</h2>
                 </t:if>
             </t:zone>
         </div>
@@ -73,5 +86,6 @@
         </t:grid>
     </div>
 </div>
+</body>
 
 </html>

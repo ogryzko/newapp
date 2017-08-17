@@ -1,4 +1,4 @@
-description = "newapp application"
+description = "bmicalculatortapestry application"
 
 apply plugin: "war"
 apply plugin: "java"
@@ -40,8 +40,8 @@ sourceSets {
     main {
         compileClasspath += [configurations.provided]
         // To give the same path as IDEA has
-        // output.resourcesDir = 'build/production/newapp'
-        // output.classesDir = 'build/production/newapp'
+        // output.resourcesDir = 'build/production/bmicalculatortapestry'
+        // output.classesDir = 'build/production/bmicalculatortapestry'
     }
     test {
         compileClasspath += [configurations.provided]

@@ -5,7 +5,7 @@
         </layout>
     </appender>
 
-    <logger name="com.example.newapp" level="TRACE"/>
+    <logger name="com.example.bmicalculatortapestry" level="TRACE"/>
 
     <root level="info">
         <appender-ref ref="STDOUT"/>

@@ -1,4 +1,4 @@
-package com.example.newapp.services;
+package com.example.bmicalculatortapestry.services;
 
 
 public class BMIcalc implements IBMIcalc {

@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="newapp Application Test Suite" annotations="1.5">
+<suite name="BMICalculatorTapestry Application Test Suite" annotations="1.5">
     <test name="Unit Tests">
         <packages>
-            <package name="com.example.newapp"/>
+            <package name="com.example.bmicalculatortapestry"/>
         </packages>
     </test>
 </suite>

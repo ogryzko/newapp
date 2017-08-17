@@ -1,4 +1,4 @@
-package com.example.newapp.services;
+package com.example.bmicalculatortapestry.services;
 
 /**
  * Created by eglushchenko on 16.08.2017.

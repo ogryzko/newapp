@@ -1,11 +1,10 @@
-package com.example.newapp.pages;
+package com.example.bmicalculatortapestry.pages;
 
 
-import com.example.newapp.enteties.HistoryItem;
-import com.example.newapp.services.IBMIcalc;
-import com.example.newapp.services.IHistoryItemFactory;
+import com.example.bmicalculatortapestry.enteties.HistoryItem;
+import com.example.bmicalculatortapestry.services.IBMIcalc;
+import com.example.bmicalculatortapestry.services.IHistoryItemFactory;
 import org.apache.tapestry5.PersistenceConstants;
-import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.annotations.InjectComponent;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
@@ -28,19 +27,22 @@ public class Index {
     @Property
     private String gender;
 
+    @Property
+    private String title;
+
     @Inject
-    IHistoryItemFactory historyItemFactory;
+    private IHistoryItemFactory historyItemFactory;
 
     @Persist(PersistenceConstants.SESSION)
     @Property
-    HistoryItem historyItem;
+    private HistoryItem historyItem;
 
     @Property
     @Persist(PersistenceConstants.SESSION)
     private List<HistoryItem> history;
 
     @Inject
-    IBMIcalc bmiCalc;
+    private IBMIcalc bmiCalc;
 
     @Inject
     private AjaxResponseRenderer ajaxResponseRenderer;
