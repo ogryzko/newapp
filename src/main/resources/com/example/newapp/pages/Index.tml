@@ -1,5 +1,6 @@
 <html t:type="layout" title="BMI Calculator"
-      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
 
 <div class="container">
     <div class="row">
@@ -8,35 +9,31 @@
                 <div class="form-group">
                     <t:label for="age" class="col-sm-3"/>
                     <div class="col-sm-3">
-                        <t:textfield t:id="age" validate="max=120,min=0"/>
+                        <t:textfield t:id="age" validate="max=120,min=1,required"/>
                     </div>
                     <div class="col-sm-6">
                         <p class="form-control-static">
                             <span class="text-muted">
-                            от 0 до 120 лет
+                            от 1 до 120 лет
                         </span>
                         </p>
                     </div>
                 </div>
-            </t:form>
-            <t:form class="form-horizontal">
-                <div class="form-group" >
+                <div class="form-group">
                     <t:label for="gender" class="col-sm-3"/>
                     <div class="col-sm-3">
-                        <t:select t:id="gender" model="literal:Мужской,Женский"/>
+                        <t:select t:id="gender" model="literal:Мужской,Женский" validate="required"/>
                     </div>
                 </div>
-            </t:form>
-            <t:form class="form-horizontal">
                 <div class="form-group">
                     <t:label for="height" class="col-sm-3"/>
                     <div class="col-sm-3">
-                        <t:textfield t:id="height" validate="max=300,min=0"/>
+                        <t:textfield t:id="height" validate="max=300,min=1,required"/>
                     </div>
                     <div class="col-sm-6">
                         <p class="form-control-static">
                             <span class="text-muted">
-                            см от 0 до 300
+                             от 1 до 300 см
                         </span>
                         </p>
                     </div>
@@ -44,25 +41,36 @@
                 <div class="form-group">
                     <t:label for="weight" class="col-sm-3"/>
                     <div class="col-sm-3">
-                        <t:textfield t:id="weight" validate="max=570,min=0"/>
+                        <t:textfield t:id="weight" validate="max=570,min=1,required"/>
+                        <t:submit class="btn btn-large btn-primary" value="Посчитать"/>
                     </div>
                     <div class="col-sm-6">
                         <p class="form-control-static">
                             <span class="text-muted">
-                            кг от 0 до 570
+                                от 1 до 570 кг
                         </span>
                         </p>
                     </div>
                 </div>
-                <t:submit/>
             </t:form>
         </div>
         <div class="col">
-
+            <t:zone t:id="result" id="result">
+                <h1>Результат</h1>
+                <t:if test="historyItem">
+                    <h2>ИКТ = ${historyItem.bmi} кг/м <sup>2</sup></h2>
+                </t:if>
+            </t:zone>
         </div>
     </div>
     <div class="row">
+        <t:grid source="history" row="historyItem" inPlace="true"
+                reorder="id,date,age,gender,height,weight,bmi,pi,kind">
+            <p:empty>
+                <p>История пуста</p>
+            </p:empty>
 
+        </t:grid>
     </div>
 </div>
 

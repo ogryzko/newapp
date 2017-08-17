@@ -30,6 +30,8 @@ public class AppModule
         // Use service builder methods (example below) when the implementation
         // is provided inline, or requires more initialization than simply
         // invoking the constructor.
+        binder.bind(IBMIcalc.class, BMIcalc.class);
+        binder.bind(IHistoryItemFactory.class, HistoryItemFactory.class);
     }
 
     public static void contributeFactoryDefaults(
@@ -138,4 +140,5 @@ public class AppModule
 
         configuration.add("Timing", filter);
     }
+
 }
